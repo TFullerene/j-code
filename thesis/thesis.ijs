@@ -20,6 +20,8 @@ rand =: 0?@$~ ]
 
 foods =: rand 20 30 
 
+listsize =: $ list1
+
 calculatefitness =: 3 : 0
 fitness =: 0
 index =: objectvalue >= 0
