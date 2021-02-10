@@ -55,12 +55,12 @@ count2 =: count1
 x =: 500 % (nodenumber + 1)
 for. i =: i.nodenumber do.
    for. j =: i.nodenumsize do.
-	d =: %: (list1(j) - x * i)^ 2) + (list2(j) - path(i))^2)
+	d =: %: (j { list1 - x * i)^ 2) + (j { list2) - i { path)^2)
 	count1(i) =: count(1) + ^(-1 * d % logradius(i))
    end.
 end.
 for. k =: i.nodenumber - 1
-   count2(k) =: %:((x)^2 + (path(k)-path(k+1))^2) 
+  k { count2 =: %:((x)^2 + (k { path - k { path + 1)^2) 
 end.
 sc1 =: +/ count1
 sc2 =: +/ count2 % 500
@@ -68,8 +68,8 @@ path =: sc1 + sc2
 )
 
 
-for. r < runtime do.
-   for. i < FoodNumber do.
+for. i. r < runtime do.
+   for. i. i < FoodNumber do.
 
 
    end.
