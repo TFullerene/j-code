@@ -47,16 +47,24 @@ fitness_of_index =: 1 + |objectvalue * (index)
 )
 
 calculatepath =: 3 : 0
-
-secvsize =: 1631
-x =: radius % ^. 20
-
-)
-
-calculatepath =: 3 : 0
-
-
-
+nodesize =: $ list2
+logradius =: radius % ^. 20
+nodenumber =: 1 1 $ 0
+count1 =: 1 1 $ 0
+count2 =: count1
+x =: 500 % (nodenumber + 1)
+for. i =: i.nodenumber do.
+   for. j =: i.nodenumsize do.
+	d =: %: (list1(j) - x * i)^ 2) + (list2(j) - path(i))^2)
+	count1(i) =: count(1) + ^(-1 * d % logradius(i))
+   end.
+end.
+for. k =: i.nodenumber - 1
+   count2(k) =: %:((x)^2 + (path(k)-path(k+1))^2) 
+end.
+sc1 =: +/ count1
+sc2 =: +/ count2 % 500
+path =: sc1 + sc2
 )
 
 
