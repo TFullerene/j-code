@@ -1,0 +1,59 @@
+%!PS
+
+/greenbox{
+    exch dup 0 rlineto
+    exch 0 exch rlineto
+    neg 0 rlineto
+    closepath
+    0.33 0.67 0.33 setrgbcolor
+    fill
+} bind def
+
+/box{
+    exch dup 0 rlineto
+    exch 0 exch rlineto
+    neg 0 rlineto
+    closepath
+    0.45 setgray
+    fill
+} bind def
+0 396 moveto
+594 198 box
+stroke
+
+0 594 moveto
+594 792 greenbox
+stroke
+
+0 0 moveto
+594 396 greenbox
+stroke
+
+%showpage
+% This makes a box going across the page, with a black outline, this will make the starting template of the road.
+% Now to start on the road I need to make a series of dashed lines across the thirds of the positions
+%0 356 moveto
+%0 356 lineto
+%1 0 0 setrgbcolor
+/yellowline{
+    1 1 0 setrgbcolor
+} bind def
+
+/dashedwhiteline{
+    [15] 0 setdash
+    1 1 1 setrgbcolor
+}bind def
+%Bottom Yellow Line of Road
+0 400 moveto
+594 0 rlineto yellowline
+stroke
+%Top Yellow Line of Road
+0 590 moveto
+594 0 rlineto yellowline
+stroke
+%Center White Line
+0 495 moveto
+594 0 rlineto dashedwhiteline
+
+stroke
+showpage
