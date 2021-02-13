@@ -5,40 +5,40 @@ list1 =: 1 {::|: readdsv 'vehicle1.dat'
 list2 =: 2 {::|: readdsv 'vehicle1.dat'
 radius =: 3 {::|: readdsv 'vehicle1.dat' 
 print =: 1!:2&2
-print list1
-print list2
-print radius
+NB.print list1
+NB.print list2
+NB.print radius
 np =: 20
-print np
+NB.print np
 foodnumber =: np%2
-print foodnumber
+NB.print foodnumber
 limit =: 100
-print limit
+NB.print limit
 d =: limit
-print d
+NB.print d
 upperbounds =: 1 100 $ d
-print upperbounds
+NB.print upperbounds
 lowerbounds =: 1 100 $ -d
-print lowerbounds
+NB.print lowerbounds
 
 runtime =: 1
-print runtime
+NB.print runtime
 globalmins =: 0
-print globalmins
+NB.print globalmins
 
 range =: 20 30 $ d
-print range
+NB.print range
 lower =: 20 30 $ _50
-print lower
+NB.print lower
 
 rand =: 0?@$~ ]
-print rand
+NB.print rand
 
 foods =: rand 20 30
-print foods
+NB.print foods
 
 listsize =: $ list1
-print listsize
+NB.print listsize
 
 calculatefitness =: 3 : 0
 fitness =: 0
