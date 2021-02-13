@@ -1,0 +1,1 @@
+plot "vehicle1.dat" u 1:2:3:1 w circles lc var notitle
