@@ -1,10 +1,12 @@
 NB. Code for my Thesis
+load 'tables/dsv'
+load 'graphics/plot'
+list1 =: 1 {::|: readdsv 'vehicle1.dat'
+list2 =: 2 {::|: readdsv 'vehicle1.dat'
+radius =: 3 {::|: readdsv 'vehicle1.dat' 
 print =: 1!:2&2
-list1 =: 100 200 300 400 150 250 350 150 250 350 466 250 250 466 30
 print list1
-list2 =: 0 0 0 0 50 50 50 _50 _50 _50 40 40 _300 300 _40 _20
 print list2
-radius =: 40 40 40 40 40 40 40 40 40 40 20 20 260 277 20 30
 print radius
 np =: 20
 print np
@@ -50,8 +52,7 @@ calculatepath =: 3 : 0
 nodesize =: $ list2
 logradius =: radius % ^. 20
 nodenumber =: 1 1 $ 0
-count1 =: 1 1 $ 0
-count2 =: count1
+count2 =: count1 =: nodenumber
 x =: 500 % (nodenumber + 1)
 for. i =: i.nodenumber do.
    for. j =: i.nodenumsize do.
