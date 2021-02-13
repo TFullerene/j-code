@@ -71,7 +71,12 @@ path =: sc1 + sc2
 
 for. i. r < runtime do.
    for. i. i < FoodNumber do.
-
-
+ i { ObjectValue =: calculatefitness i { foods
    end.
 end.
+fitness =: calculatefitness objectvalue
+
+trial =: 1 1 $ i.foodnumber
+
+BestIndex =: <. ObjectValue
+
