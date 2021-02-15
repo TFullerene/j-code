@@ -1,44 +1,45 @@
 NB. Code for my Thesis
-load 'tables/dsv'
+load 'tables/csv'
 load 'graphics/plot'
-list1 =: 1 {::|: readdsv 'vehicle1.dat'
-list2 =: 2 {::|: readdsv 'vehicle1.dat'
-radius =: 3 {::|: readdsv 'vehicle1.dat' 
+NB.x =: readcsv '~/Desktop/j-code/thesis/vehicle1.csv'
+list1 =: > 0 {::|: readcsv '~/Desktop/j-code/thesis/vehicle1.csv'
+list2 =: > 1 {::|: readcsv '~/Desktop/j-code/thesis/vehicle1.csv'
+radius =: > 2 {::|: readcsv '~/Desktop/j-code/thesis/vehicle1.csv' 
 print =: 1!:2&2
-NB.print list1
-NB.print list2
-NB.print radius
+print list1
+print list2
+print radius
 np =: 20
-NB.print np
+print np
 foodnumber =: np%2
-NB.print foodnumber
+print foodnumber
 limit =: 100
-NB.print limit
+print limit
 d =: limit
-NB.print d
+print d
 upperbounds =: 1 100 $ d
-NB.print upperbounds
+print upperbounds
 lowerbounds =: 1 100 $ -d
-NB.print lowerbounds
+print lowerbounds
 
 runtime =: 1
-NB.print runtime
+print runtime
 globalmins =: 0
-NB.print globalmins
+print globalmins
 
 range =: 20 30 $ d
-NB.print range
+print range
 lower =: 20 30 $ _50
-NB.print lower
+print lower
 
 rand =: 0?@$~ ]
-NB.print rand
+print rand
 
 foods =: rand 20 30
-NB.print foods
+print foods
 
 listsize =: $ list1
-NB.print listsize
+print listsize
 
 calculatefitness =: 3 : 0
 fitness =: 0
@@ -69,8 +70,8 @@ path =: sc1 + sc2
 )
 
 
-for. i. r < runtime do.
-   for. i. i < FoodNumber do.
+for. i. runtime do.
+   for. i. FoodNumber do.
  i { ObjectValue =: calculatefitness i { foods
    end.
 end.
