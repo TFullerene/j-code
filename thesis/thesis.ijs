@@ -79,5 +79,27 @@ fitness =: calculatefitness objectvalue
 
 trial =: 1 1 $ i.foodnumber
 
-BestIndex =: <. ObjectValue
+BestIndex =: <. objectvalue
 
+globalMin =: BestIndex { objectvalue
+
+globalParameters =: BestIndex  { foods
+
+iteration =: 1
+
+while. iteration <: maxCycle do.
+       for. i.foodNumber do.
+    	    changeParam =: (? * D) + 1
+	    neighbor =: (? * foodNumber) + 1
+
+	    	  while. neighbor = i do.
+	    	   	 neighbor =: (? * foodNumber) + 1
+	    	   end.
+	    end.
+end.
+
+solution =: i { foods
+
+index =: solution < lowerbounds
+
+firstvsize =:  (1?D) * (upperbounds - lowerbounds) + lowerbounds
