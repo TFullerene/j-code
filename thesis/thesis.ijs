@@ -87,7 +87,7 @@ globalMin =: BestIndex { objectvalue
 
 globalParameters =: BestIndex  { foods
 
-iteration =: 1
+iteration =: runtime
 
 while. iteration <: maxCycle do.
        for. i.foodNumber do.
