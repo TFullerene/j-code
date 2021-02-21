@@ -2,9 +2,9 @@ NB. Code for my Thesis
 load 'tables/csv'
 load 'graphics/plot'
 NB.x =: readcsv '~/Desktop/j-code/thesis/vehicle1.csv'
-list1 =: > 0 {::|: readcsv '~/Desktop/j-code/thesis/vehicle1.csv'
-list2 =: > 1 {::|: readcsv '~/Desktop/j-code/thesis/vehicle1.csv'
-radius =: > 2 {::|: readcsv '~/Desktop/j-code/thesis/vehicle1.csv' 
+list1 =: 0 {::|: readcsv '~/Desktop/j-code/thesis/vehicle1.csv'
+list2 =: 1 {::|: readcsv '~/Desktop/j-code/thesis/vehicle1.csv'
+radius =: 2 {::|: readcsv '~/Desktop/j-code/thesis/vehicle1.csv' 
 print =: 1!:2&2
 print list1
 print list2
