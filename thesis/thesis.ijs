@@ -35,8 +35,10 @@ print lower
 rand =: 0?@$~ ]
 print rand
 
+NB. Or Foods is ? 20 30 $ 100
 foods =: rand 20 30
 print foods
+
 
 listsize =: $ list1
 print listsize
