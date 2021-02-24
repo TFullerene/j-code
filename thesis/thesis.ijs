@@ -43,13 +43,15 @@ print foods
 listsize =: $ list1
 print listsize
 
-calculatefitness =: 3 : 0
-fitness =: 0
-index =: objectvalue >= 0
-fitness_of_index =: 1 % (objectvalue * (index) + 1)
-index =: objectvalue < 0
-fitness_of_index =: 1 + |objectvalue * (index)
-)
+NB. calculatefitness =: 3 : 0
+NB. fitness =: 0
+NB. index =: objectvalue >= 0
+NB. fitness_of_index =: 1 % (objectvalue * (index) + 1)
+NB. index =: objectvalue < 0
+NB. fitness_of_index =: 1 + |objectvalue * (index)
+NB. )
+
+calcfit =: 1 16 $ 0
 
 calculatepath =: 3 : 0
 nodesize =: $ list2
@@ -74,10 +76,10 @@ path =: sc1 + sc2
 
 for. i. runtime do.
    for. i. FoodNumber do.
- i { ObjectValue =: calculatefitness i { foods
+ i { ObjectValue =: calcfit i { foods
    end.
 end.
-fitness =: calculatefitness objectvalue
+fitness =: calcfit objectvalue
 
 trial =: 1 1 $ i.foodnumber
 
@@ -87,7 +89,7 @@ globalMin =: BestIndex { objectvalue
 
 globalParameters =: BestIndex  { foods
 
-iteration =: 1
+iteration =: runtime
 
 while. iteration <: maxCycle do.
        for. i.foodNumber do.
