@@ -32,7 +32,7 @@ print range
 lower =: 20 30 $ _50
 print lower
 
-rand =: 0?@$~ ]
+rand =: 100?@$~ ]
 print rand
 
 foods =: rand 20 30
