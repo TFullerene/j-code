@@ -52,7 +52,7 @@ NB. fitness_of_index =: 1 + |objectvalue * (index)
 NB. )
 
 calcfit =: 1 16 $ 0
-
+print calcfit
 calculatepath =: 3 : 0
 nodesize =: $ list2
 logradius =: radius % ^. 20
