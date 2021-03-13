@@ -59,7 +59,7 @@ end.
 sc1 =: +/ count1
 sc2 =: +/ count2 % 500
 path =: sc1 + sc2
-)
+
 for. i. runtime do.
    for. i. FoodNumber do.
  i { ObjectValue =: calcfit i { foods
