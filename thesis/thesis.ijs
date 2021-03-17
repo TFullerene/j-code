@@ -32,13 +32,13 @@ foods =: rand 20 30
 print foods
 listsize =: $ list1
 print listsize
-NB. calculatefitness =: 3 : 0
-NB. fitness =: 0
-NB. index =: objectvalue >= 0
-NB. fitness_of_index =: 1 % (objectvalue * (index) + 1)
-NB. index =: objectvalue < 0
-NB. fitness_of_index =: 1 + |objectvalue * (index)
-NB. )
+calculatefitness =: 3 : 0
+fitness =: 0
+index =: objectvalue >= 0
+fitness_of_index =: 1 % (objectvalue * (index) + 1)
+index =: objectvalue < 0
+fitness_of_index =: 1 + |objectvalue * (index)
+)
 calcfit =: 1 16 $ 0
 print calcfit
 calculatepath =: 3 : 0
@@ -53,22 +53,24 @@ for. i =: i.nodenumber do.
 	count1(i) =: count(1) + ^(-1 * d % logradius(i))
    end.
 end.
-for. k =: i.nodenumber - 1
+for. k =: i.nodenumber - 1 do.
   k { count2 =: %:((x)^2 + (k { path - k { path + 1)^2) 
 end.
 sc1 =: +/ count1
 sc2 =: +/ count2 % 500
 path =: sc1 + sc2
 )
-for. i. runtime do.
-   for. i. FoodNumber do.
+objectvalcalc =: 3 : 0
+for. i.runtime do.
+   for. i.FoodNumber do.
  i { ObjectValue =: calcfit i { foods
    end.
 end.
-fitness =: calcfit objectvalue
+)
+fitness =: calcfit { ObjectValue
 trial =: 1 1 $ i.foodnumber
-BestIndex =: <. objectvalue
-globalMin =: BestIndex { objectvalue
+BestIndex =: <. ObjectValue
+globalMin =: BestIndex { ObjectValue
 globalParameters =: BestIndex  { foods
 iteration =: runtime
 while. iteration <: maxCycle do.
